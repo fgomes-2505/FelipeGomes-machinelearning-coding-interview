@@ -6,4 +6,4 @@ class MessageRequest(BaseModel):
 
 
 class MessageResponse(BaseModel):
-    received: str
+    answer: str

@@ -42,6 +42,10 @@ Thumbs.db
 .env
 .env.*
 
+# Vector database
+
+chroma_db/
+
 # Build artifacts
 
 build/

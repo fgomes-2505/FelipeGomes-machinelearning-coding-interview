@@ -11,10 +11,12 @@ services:
 
     volumes:
       - ./app:/app/app
+      - ./startup.sh:/app/startup.sh
 
-    command: >
-      uv run uvicorn
-      app.main:app
-      --host 0.0.0.0
-      --port 8000
-      --reload
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+    env_file:
+      - .env
+
+    command: bash /app/startup.sh
